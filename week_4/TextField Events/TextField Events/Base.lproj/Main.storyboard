@@ -20,11 +20,21 @@
                                 <rect key="frame" x="26" y="136" width="340" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="TextFieldOnEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zMu-LH-kBI"/>
+                                    <action selector="textFieldOnEditingBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="rF5-i3-Sva"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5v-jv-rDP">
+                                <rect key="frame" x="132" y="212" width="129" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="I am down ✅"/>
+                                <connections>
+                                    <action selector="imDoneButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLP-vU-JKq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
