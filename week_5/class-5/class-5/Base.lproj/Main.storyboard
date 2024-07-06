@@ -83,39 +83,42 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Num Pad View Controller-->
         <scene sceneID="kQ6-nO-ro2">
             <objects>
-                <viewController id="gQH-Wg-S46" sceneMemberID="viewController">
+                <viewController id="gQH-Wg-S46" customClass="NumPadViewController" customModule="class_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pVY-n1-iNC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="5o1-pf-xIN">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5o1-pf-xIN">
+                                <rect key="frame" x="0.0" y="59" width="393" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="Stackview is cool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNd-sb-08n">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="219.66666666666666"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" horizontalCompressionResistancePriority="780" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNd-sb-08n">
+                                        <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="100"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hello Stackview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C08-Tv-bFp">
-                                        <rect key="frame" x="0.0" y="269.66666666666669" width="393" height="219.66666666666669"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="800" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C08-Tv-bFp">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="117.66666666666666" height="100"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my Stackview " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYx-vM-tqs">
-                                        <rect key="frame" x="0.0" y="539.33333333333337" width="393" height="219.66666666666663"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYx-vM-tqs">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="117.66666666666669" height="100"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ial-o8-Fr2"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gPO-xz-xnM"/>
@@ -124,9 +127,13 @@
                             <constraint firstItem="5o1-pf-xIN" firstAttribute="trailing" secondItem="gPO-xz-xnM" secondAttribute="trailing" id="Geu-SG-WUh"/>
                             <constraint firstItem="5o1-pf-xIN" firstAttribute="leading" secondItem="gPO-xz-xnM" secondAttribute="leading" id="TOE-i3-zip"/>
                             <constraint firstItem="5o1-pf-xIN" firstAttribute="top" secondItem="gPO-xz-xnM" secondAttribute="top" id="d86-UG-z6B"/>
-                            <constraint firstItem="5o1-pf-xIN" firstAttribute="bottom" secondItem="gPO-xz-xnM" secondAttribute="bottom" id="sX3-pE-NXn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="oneLabel" destination="oNd-sb-08n" id="CEe-dC-0lS"/>
+                        <outlet property="secondLabel" destination="C08-Tv-bFp" id="62X-Nn-hnN"/>
+                        <outlet property="thirdLabel" destination="oYx-vM-tqs" id="E40-J3-MUl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTH-kd-znr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
