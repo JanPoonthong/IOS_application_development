@@ -18,9 +18,11 @@ class NumPadViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         oneLabel.layer.cornerRadius = oneLabel.frame.height / 2
+        oneLabel.layer.masksToBounds = true
         secondLabel.layer.cornerRadius = oneLabel.frame.height / 2
+        secondLabel.layer.masksToBounds = true
         thirdLabel.layer.cornerRadius = oneLabel.frame.height / 2
-
+        thirdLabel.layer.masksToBounds = true
     }
 
 
