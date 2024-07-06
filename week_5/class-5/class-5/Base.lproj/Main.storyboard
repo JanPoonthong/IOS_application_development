@@ -154,7 +154,7 @@
         <!--Form View Controller-->
         <scene sceneID="nxw-xD-bI0">
             <objects>
-                <viewController id="6Xn-IB-BbU" customClass="FormViewController" customModule="class_5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="6Xn-IB-BbU" customClass="FormViewController" customModule="class_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yqf-3f-24o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,9 +189,9 @@
         <!--Detail View Controller-->
         <scene sceneID="5f2-Ly-erR">
             <objects>
-                <viewController id="R8x-gM-gtm" customClass="DetailViewController" customModule="class_5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="R8x-gM-gtm" customClass="DetailViewController" customModule="class_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mI5-Ct-hES">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thW-9a-893">
@@ -201,6 +201,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kH-bm-Hgs">
+                                <rect key="frame" x="169" y="412" width="84" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="R8x-gM-gtm" eventType="touchUpInside" id="1XU-BL-Ivg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mB2-FA-nvm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

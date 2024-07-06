@@ -20,7 +20,10 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
