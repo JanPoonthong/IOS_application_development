@@ -9,8 +9,14 @@ import UIKit
 
 class ThirdPageViewController: UIViewController {
 
+    @IBOutlet weak var courseLabel: UILabel!
+    
+    var course: Course?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        courseLabel.text = course?.title
 
         // Do any additional setup after loading the view.
     }

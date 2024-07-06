@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thirdpage = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "thirdpage") as! ThirdPageViewController
+        thirdpage.course = courses[indexPath.row]
         navigationController?.pushViewController(thirdpage, animated: true)
     }
     
@@ -53,6 +54,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = UIEdgeInsets(top: 60, left: 0, bottom: 0, right: 0)
+        tableView.separatorStyle = .none
     }
     
     @objc func editClicked() {

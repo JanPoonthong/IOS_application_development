@@ -16,6 +16,9 @@ class GradeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         grade.textColor = .red
+        
+        backgroundColor = .green
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
