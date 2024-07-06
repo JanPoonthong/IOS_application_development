@@ -13,6 +13,9 @@
 		6C01A4452C391F9900D15115 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C01A4442C391F9900D15115 /* Base */; };
 		6C01A4472C391F9A00D15115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C01A4462C391F9A00D15115 /* Assets.xcassets */; };
 		6C01A44A2C391F9A00D15115 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C01A4492C391F9A00D15115 /* Base */; };
+		6C01A4522C3922B900D15115 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01A4512C3922B900D15115 /* SecondPageViewController.swift */; };
+		6C01A4542C392AE900D15115 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01A4532C392AE900D15115 /* ThirdPageViewController.swift */; };
+		6C01A4562C39336200D15115 /* GradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01A4552C39336200D15115 /* GradeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6C01A4462C391F9A00D15115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C01A4492C391F9A00D15115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C01A44B2C391F9A00D15115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C01A4512C3922B900D15115 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
+		6C01A4532C392AE900D15115 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
+		6C01A4552C39336200D15115 /* GradeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				6C01A4462C391F9A00D15115 /* Assets.xcassets */,
 				6C01A4482C391F9A00D15115 /* LaunchScreen.storyboard */,
 				6C01A44B2C391F9A00D15115 /* Info.plist */,
+				6C01A4512C3922B900D15115 /* SecondPageViewController.swift */,
+				6C01A4532C392AE900D15115 /* ThirdPageViewController.swift */,
+				6C01A4552C39336200D15115 /* GradeTableViewCell.swift */,
 			);
 			path = "class-6";
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C01A4422C391F9900D15115 /* ViewController.swift in Sources */,
+				6C01A4522C3922B900D15115 /* SecondPageViewController.swift in Sources */,
 				6C01A43E2C391F9900D15115 /* AppDelegate.swift in Sources */,
 				6C01A4402C391F9900D15115 /* SceneDelegate.swift in Sources */,
+				6C01A4542C392AE900D15115 /* ThirdPageViewController.swift in Sources */,
+				6C01A4562C39336200D15115 /* GradeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
