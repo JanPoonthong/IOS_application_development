@@ -9,20 +9,27 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let courses: [Course] = [Course(title: "English 1", grade: "A"), Course(title: "iOS App Development", grade: "A"), Course(title: "Business Intelligence", grade: "B"), Course(title: "User Interface Design", grade: "C")]
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return courses.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GradeTableViewCell
-        cell.course.text = "iOS App Development"
-        cell.grade.text = "A"
+        cell.course.text = courses[indexPath.row].title
+        cell.grade.text = courses[indexPath.row].grade
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let thirdpage = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "thirdpage") as! ThirdPageViewController
+        navigationController?.pushViewController(thirdpage, animated: true)
     }
     
 
