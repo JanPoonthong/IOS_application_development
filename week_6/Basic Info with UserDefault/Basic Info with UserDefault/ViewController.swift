@@ -26,7 +26,17 @@ class ViewController: UIViewController {
             emailInput.text = email
         }
     }
-
+    
+    @IBAction func clearButtonClicked(_ sender: Any) {
+        nameInput.text = ""
+        ageInput.text = ""
+        emailInput.text = ""
+        
+        UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "age")
+        UserDefaults.standard.removeObject(forKey: "email")
+    }
+    
     @IBAction func saveButtonClicked(_ sender: Any) {
         let name = nameInput.text ?? ""
         let age = ageInput.text ?? ""
@@ -35,6 +45,14 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(name, forKey: "name")
         UserDefaults.standard.set(age, forKey: "age")
         UserDefaults.standard.set(email, forKey: "email")
+        
+        let alert = UIAlertController(title: "Hi, there 🏝️", message: "Your information are saved", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+//        alert.addAction(UIAlertAction(title: "Destructive", style: .destructive))
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(alert, animated: true)
     }
     
 }
