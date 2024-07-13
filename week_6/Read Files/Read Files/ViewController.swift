@@ -16,27 +16,51 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        if let content = readTextFile(named: "Configuration", withExtension: "txt") {
-            let configs : [String] = content.components(separatedBy: ",")
+        guard let txtContent = readTextFile(named: "Configuration", withExtension: "txt") else {
+            return
+        }
+                
+        guard let jsonContent = readJSONFile(named: "Configuration", withExtension: "json") else {
+            return
+        }
+        
+            let configs : [String] = txtContent.components(separatedBy: ",")
             
-            switch configs[0] {
+        switch jsonContent.color {
             case "Red":
                 view.backgroundColor = .red
-                universityName.text = configs[2]
-                appName.text = configs[1]
             case "Blue":
                 view.backgroundColor = .blue
-                universityName.text = configs[2]
-                appName.text = configs[1]
             case "Yello":
                 view.backgroundColor = .yellow
-                universityName.text = configs[2]
-                appName.text = configs[1]
+                
             default:
                 view.backgroundColor = .black
             }
-        }
         
+        universityName.text = jsonContent.university
+        appName.text =  jsonContent.app
+        
+        
+    }
+    
+    // Function to read JSON file from the app bundle
+    func readJSONFile(named fileName: String, withExtension fileExtension: String) -> AppInfo? {
+        // Locate the file in the bundle
+        if let fileURL = Bundle.main.url(forResource: fileName, withExtension: fileExtension) {
+            do {
+                // Read the data from the file
+                let data = try Data(contentsOf: fileURL)
+                // Decode the data to the AppInfo struct
+                let appInfo = try JSONDecoder().decode(AppInfo.self, from: data)
+                return appInfo
+            } catch {
+                print("Error reading or decoding file: \(error.localizedDescription)")
+            }
+        } else {
+            print("File not found.")
+        }
+        return nil
     }
     
     func readTextFile(named fileName: String, withExtension fileExtension: String) -> String? {
