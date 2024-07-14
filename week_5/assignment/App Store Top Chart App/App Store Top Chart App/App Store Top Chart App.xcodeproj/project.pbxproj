@@ -17,6 +17,7 @@
 		6CBAACFE2C4109EF001B3051 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAACFC2C4109EE001B3051 /* SampleData.swift */; };
 		6CBAAD002C410B68001B3051 /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAACFF2C410B68001B3051 /* AppTableViewCell.swift */; };
 		6CBAAD042C410C22001B3051 /* AppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAAD032C410C22001B3051 /* AppTableViewController.swift */; };
+		6CBAAD5A2C42B0E7001B3051 /* EachAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAAD592C42B0E7001B3051 /* EachAppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6CBAACFC2C4109EE001B3051 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		6CBAACFF2C410B68001B3051 /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		6CBAAD032C410C22001B3051 /* AppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewController.swift; sourceTree = "<group>"; };
+		6CBAAD592C42B0E7001B3051 /* EachAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachAppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				6CBAACF32C3FE206001B3051 /* Info.plist */,
 				6CBAACFF2C410B68001B3051 /* AppTableViewCell.swift */,
 				6CBAAD032C410C22001B3051 /* AppTableViewController.swift */,
+				6CBAAD592C42B0E7001B3051 /* EachAppViewController.swift */,
 			);
 			path = "App Store Top Chart App";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				6CBAACE62C3FE205001B3051 /* AppDelegate.swift in Sources */,
 				6CBAACE82C3FE205001B3051 /* SceneDelegate.swift in Sources */,
 				6CBAAD002C410B68001B3051 /* AppTableViewCell.swift in Sources */,
+				6CBAAD5A2C42B0E7001B3051 /* EachAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

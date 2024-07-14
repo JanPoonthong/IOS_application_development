@@ -9,8 +9,8 @@ import UIKit
 
 class AppTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var appName: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var labelDescription: UILabel!
     
     override func awakeFromNib() {
