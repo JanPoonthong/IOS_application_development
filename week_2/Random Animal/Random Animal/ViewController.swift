@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func randomAnimal() {
-        let randomInt = Int.random(in: 0..<6)
+        let randomInt = Int.random(in: 0..<6) // 0 to 5
         animalImage.image = UIImage(named: "\(images[randomInt])")
-        let name = images[randomInt].components(separatedBy: ".")
+        let name = images[randomInt].components(separatedBy: ".") // remove jpg, poorly written
         animalLabel.text = name[0]
     }
 

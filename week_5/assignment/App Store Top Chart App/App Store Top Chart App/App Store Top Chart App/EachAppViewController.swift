@@ -38,29 +38,6 @@ class EachAppViewController: UIViewController {
         shortDescription.text = detail.shortDescription
         descrip.text = detail.detailedDescription
         
-//        let scrollView = UIScrollView()
-//                scrollView.translatesAutoresizingMaskIntoConstraints = false
-//                view.addSubview(scrollView)
-//
-//                NSLayoutConstraint.activate([
-//                    scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//                    scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//                    scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-//                    scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//                ])
-//        
-//        let contentView = UIView()
-//        contentView.translatesAutoresizingMaskIntoConstraints = false
-//               scrollView.addSubview(contentView)
-//
-//               NSLayoutConstraint.activate([
-//                   contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-//                   contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-//                   contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-//                   contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-//                   contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
-//               ])
-        
         var previousImageView: UIImageView?
         for imageName in detail.screenshotGallery {
                     let imageView = UIImageView(image: UIImage(named: imageName))
@@ -71,7 +48,7 @@ class EachAppViewController: UIViewController {
                     NSLayoutConstraint.activate([
                         imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
                         imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-                        imageView.widthAnchor.constraint(equalToConstant: 200) // Set a specific width for each image
+                        imageView.widthAnchor.constraint(equalToConstant: 200)
                     ])
 
                     if let previousImageView = previousImageView {
