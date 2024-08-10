@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func buttonClicked(_ sender: Any) {
+        // release focus and the keyboard will hide
         citizenID.resignFirstResponder()
     }
 }
