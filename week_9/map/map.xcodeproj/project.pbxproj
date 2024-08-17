@@ -13,6 +13,10 @@
 		6C2741DA2C70432400DBCCF8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C2741D92C70432400DBCCF8 /* Base */; };
 		6C2741DC2C70432500DBCCF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C2741DB2C70432500DBCCF8 /* Assets.xcassets */; };
 		6C2741DF2C70432500DBCCF8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C2741DE2C70432500DBCCF8 /* Base */; };
+		6C7460E22C704724006E8314 /* abac_location.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C7460E12C704724006E8314 /* abac_location.json */; };
+		6C7460E42C70473D006E8314 /* AUPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7460E32C70473D006E8314 /* AUPlace.swift */; };
+		6C7460E82C704936006E8314 /* AUPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7460E72C704936006E8314 /* AUPlaceCell.swift */; };
+		6C7460EA2C70510A006E8314 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7460E92C70510A006E8314 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6C2741DB2C70432500DBCCF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C2741DE2C70432500DBCCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C2741E02C70432500DBCCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C7460E12C704724006E8314 /* abac_location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = abac_location.json; path = ../../abac_location.json; sourceTree = "<group>"; };
+		6C7460E32C70473D006E8314 /* AUPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUPlace.swift; sourceTree = "<group>"; };
+		6C7460E72C704936006E8314 /* AUPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUPlaceCell.swift; sourceTree = "<group>"; };
+		6C7460E92C70510A006E8314 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				6C2741DB2C70432500DBCCF8 /* Assets.xcassets */,
 				6C2741DD2C70432500DBCCF8 /* LaunchScreen.storyboard */,
 				6C2741E02C70432500DBCCF8 /* Info.plist */,
+				6C7460E12C704724006E8314 /* abac_location.json */,
+				6C7460E32C70473D006E8314 /* AUPlace.swift */,
+				6C7460E72C704936006E8314 /* AUPlaceCell.swift */,
+				6C7460E92C70510A006E8314 /* MapViewController.swift */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -126,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C2741DC2C70432500DBCCF8 /* Assets.xcassets in Resources */,
+				6C7460E22C704724006E8314 /* abac_location.json in Resources */,
 				6C2741DF2C70432500DBCCF8 /* Base in Resources */,
 				6C2741DA2C70432400DBCCF8 /* Base in Resources */,
 			);
@@ -139,7 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C2741D72C70432400DBCCF8 /* ViewController.swift in Sources */,
+				6C7460EA2C70510A006E8314 /* MapViewController.swift in Sources */,
+				6C7460E82C704936006E8314 /* AUPlaceCell.swift in Sources */,
 				6C2741D32C70432400DBCCF8 /* AppDelegate.swift in Sources */,
+				6C7460E42C70473D006E8314 /* AUPlace.swift in Sources */,
 				6C2741D52C70432400DBCCF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
