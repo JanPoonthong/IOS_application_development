@@ -88,6 +88,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="iGm-HH-eeO"/>
+                    <connections>
+                        <outlet property="mapView" destination="C9x-eX-0bV" id="P9W-We-bRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Dl-ce-gJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
