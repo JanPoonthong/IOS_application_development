@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -17,44 +17,32 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        if let result = readJSONFile(named: "abac_location", withExtension: "json") {
-                AUPlaces = result.locations
-                
-                for place in AUPlaces {
-                    let annotation = MKPointAnnotation()
-                    annotation.title = place.FacultyName
-                    annotation.subtitle = place.Abbreviation
-                    annotation.coordinate = CLLocationCoordinate2D(latitude: place.LocationLat, longitude: place.LocationLong)
-                    mapView.addAnnotation(annotation)
-                }
-            }
+        mapView.delegate = self
+        setInitialLocation()
+        loadLocationData()
+        addAnnotations()
+
     }
     
-    @IBAction func showAlertButtonTapped(_ sender: UIButton) {
-            guard let place = AUPlaces.first else { return } // For demonstration, using the first place
-            
-            let alertController = UIAlertController(
-                title: place.FacultyName,
-                message: "Coordinates: \(place.LocationLat), \(place.LocationLong)",
-                preferredStyle: .alert
-            )
-            
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            
-            present(alertController, animated: true, completion: nil)
+    // Step 1: Set Initial Map Location
+        func setInitialLocation() {
+            let initialLocation = CLLocationCoordinate2D(latitude: 13.612320, longitude: 100.836808)
+            let region = MKCoordinateRegion(center: initialLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            mapView.setRegion(region, animated: true)
+        }
+        
+        // Step 2: Parse JSON Data
+        func loadLocationData() {
+            if let result = readJSONFile(named: "abac_location", withExtension: "json") {
+                AUPlaces = result.locations
+            }
         }
     
     func readJSONFile(named fileName: String, withExtension fileExtension: String) -> AUPlaceClass? {
-        // Locate the file in the bundle
         if let fileURL = Bundle.main.url(forResource: fileName, withExtension: fileExtension) {
             do {
-                // Read the data from the file
                 let data = try Data(contentsOf: fileURL)
-                // Decode the data to the AppInfo struct
                 let appInfo = try JSONDecoder().decode(AUPlaceClass.self, from: data)
                 return appInfo
             } catch {
@@ -66,6 +54,59 @@ class MapViewController: UIViewController {
         return nil
     }
     
+    // Step 3: Add Annotations
+    func addAnnotations() {
+        for place in AUPlaces {
+            let annotation = MKPointAnnotation()
+            annotation.title = place.FacultyName
+            annotation.subtitle = place.Abbreviation
+            annotation.coordinate = CLLocationCoordinate2D(latitude: place.LocationLat, longitude: place.LocationLong)
+            mapView.addAnnotation(annotation)
+        }
+    }
+
+    // Step 4: Customize Callout with Detail Button
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "AUPlacePin"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            
+            let detailButton = UIButton(type: .detailDisclosure)
+            annotationView?.rightCalloutAccessoryView = detailButton
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView
+    }
+    
+    // Handle tap on callout detail button
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let annotation = view.annotation {
+            showAlert(for: annotation)
+        }
+    }
+    
+    // Show alert with faculty name and coordinates
+    func showAlert(for annotation: MKAnnotation) {
+        let title = annotation.title ?? "Unknown Place"
+        let coordinate = annotation.coordinate
+        let message = "Coordinates: \(coordinate.latitude), \(coordinate.longitude)"
+        
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
