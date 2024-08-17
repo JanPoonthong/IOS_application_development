@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -63,8 +64,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.AULogo.image = UIImage(named: AUPlaces[i].ImageLogoName)
         cell.AUName.text = AUPlaces[i].FacultyName
-        cell.AUDistance.text = "None"
+        let distance = calculateDistance(
+            from: CLLocation(latitude: 13.612320, longitude: 100.836808),
+            to: CLLocation(latitude: AUPlaces[i].LocationLat, longitude: AUPlaces[i].LocationLong)
+        )
+        cell.AUDistance.text = String(format: "%.2f meters", distance)
         return cell
+    }
+    
+    func calculateDistance(from location1: CLLocation, to location2: CLLocation) -> CLLocationDistance {
+        return location1.distance(from: location2)
     }
     
 }
