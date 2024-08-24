@@ -43,6 +43,11 @@ enum CardBrandOption {
 //var car2 = CarModel(brand: brand1, model: "Focus")
 //var car3 = CarModel(brand: brand2, model: "Camry")
 
-var car1 = CarModel(brand: .ford.title, model: "Fiesta")
+var car1 = CarModel(brand: .ford, model: "Fiesta")
 var car2 = CarModel(brand: .ford, model: "Focus")
 var car3 = CarModel(brand: .toyota, model: "Camry")
+
+
+var fordBrand: CardBrandOption = .ford
+
+print(fordBrand.title)

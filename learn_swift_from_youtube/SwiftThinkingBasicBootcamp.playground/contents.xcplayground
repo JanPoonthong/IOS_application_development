@@ -12,5 +12,7 @@
         <page name='ObjectOrientedProgramming'/>
         <page name='Enums'/>
         <page name='Structs'/>
+        <page name='Classes'/>
+        <page name='AccessControl'/>
     </pages>
 </playground>
