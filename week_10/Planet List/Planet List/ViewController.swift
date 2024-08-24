@@ -42,11 +42,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selecting")
         let secondPage = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "secondpage") as! SeoncdViewController
         
         secondPage.info = planets[indexPath.row]
-    
-        navigationController?.pushViewController(secondPage, animated: true)
+        print("moving to next screen")
+
+        let navController = UINavigationController(rootViewController: secondPage)
+        present(navController, animated: true, completion: nil)
+
+        
+//        navigationController?.pushViewController(secondPage, animated: true)
     }
+
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class SeoncdViewController: UIViewController {
     
-    var info: [(img: String, name: String)]?
+    var info: (img: String, name: String)?
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
@@ -17,6 +17,10 @@ class SeoncdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nameLabel.text = info?.name
+        image.image = UIImage(named: info?.img ?? "None")
+        
+        print("Image and name are set")
         
     }
     
