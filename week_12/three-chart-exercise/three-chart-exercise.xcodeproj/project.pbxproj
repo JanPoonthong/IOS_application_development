@@ -13,6 +13,7 @@
 		6C1E076A2C8BF6AA00BFF90D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C1E07692C8BF6AA00BFF90D /* Base */; };
 		6C1E076C2C8BF6AB00BFF90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C1E076B2C8BF6AB00BFF90D /* Assets.xcassets */; };
 		6C1E076F2C8BF6AB00BFF90D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C1E076E2C8BF6AB00BFF90D /* Base */; };
+		6C1E07782C8BF7B500BFF90D /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1E07772C8BF7B500BFF90D /* DGCharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1E07782C8BF7B500BFF90D /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "three-chart-exercise";
+			packageProductDependencies = (
+				6C1E07772C8BF7B500BFF90D /* DGCharts */,
+			);
 			productName = "three-chart-exercise";
 			productReference = 6C1E075F2C8BF6AA00BFF90D /* three-chart-exercise.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 6C1E07562C8BF6AA00BFF90D;
+			packageReferences = (
+				6C1E07762C8BF7B500BFF90D /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 6C1E07602C8BF6AA00BFF90D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C1E07762C8BF7B500BFF90D /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ChartsOrg/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C1E07772C8BF7B500BFF90D /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C1E07762C8BF7B500BFF90D /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C1E07572C8BF6AA00BFF90D /* Project object */;
 }
