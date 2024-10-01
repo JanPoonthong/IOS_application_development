@@ -21,9 +21,8 @@ struct Restaurant: Codable {
     let description: String
     let rating: Double
     let openingTime: String
-    let price : String
+    let price: String
     let images: [String]
-    
 
     enum CodingKeys: String, CodingKey {
         case name = "name"

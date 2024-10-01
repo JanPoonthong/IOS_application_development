@@ -8,7 +8,7 @@
 import UIKit
 
 class RestaurantCell: UITableViewCell {
-    
+
     @IBOutlet var displayImage: UIImageView!
     @IBOutlet var displayName: UILabel!
     @IBOutlet var displayLocation: UILabel!
@@ -17,13 +17,13 @@ class RestaurantCell: UITableViewCell {
     @IBOutlet var displayPrice: UILabel!
     @IBOutlet weak var displayHeart: UIButton!
     @IBOutlet weak var HeartImage: UIImageView!
-    
+
     @IBOutlet var start1: UIImageView!
     @IBOutlet var start2: UIImageView!
     @IBOutlet var start3: UIImageView!
     @IBOutlet var start4: UIImageView!
     @IBOutlet var start5: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,14 +34,14 @@ class RestaurantCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func displayStars(numberOfRating: Double) {
         start1.isHidden = true
         start2.isHidden = true
         start3.isHidden = true
         start4.isHidden = true
         start5.isHidden = true
-        
+
         if numberOfRating >= 1 {
             start1.isHidden = false
         }
